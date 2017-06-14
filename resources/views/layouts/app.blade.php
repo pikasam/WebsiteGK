@@ -92,6 +92,21 @@
                     </div>
                 </div>
             </div>
+            <div class="modal-body">
+                {!! Form::open(array('url' => '/crud.edit', 'method' => 'POST', 'class' => 'form'))!!}
+                <div class="form-group">
+                    {!! Form::label('name', 'name') !!}
+                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::submit('Edit Game', ['class' => 'btn btn-default']) !!}
+                    <div class="form-group">
+                    {!! Form::close() !!}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div><!-- /.modal-header -->
         </nav>
 
         @yield('content')
@@ -99,5 +114,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    {{-- bootstrap js --}}
 </body>
 </html>
