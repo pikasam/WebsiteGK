@@ -33,7 +33,6 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ HTML::image('img/placeholder.jpg') }}
                         {{ config('PhoteFrameOnline', 'PhotoFrameOnline') }}
                     </a>
                 </div>
