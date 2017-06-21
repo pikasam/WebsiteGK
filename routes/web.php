@@ -17,5 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Front-end
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact', 'ContactController@index')->name('contact');
+
+// Back-end
+Route::post('/crud/edit/{id}', 'CrudController@edit');
+Route::get('/crud/delete/{id}', 'CrudController@delete');
