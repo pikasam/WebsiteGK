@@ -24,3 +24,4 @@ Route::get('/contact', 'ContactController@index')->name('contact');
 // Back-end
 Route::post('/crud/edit/{id}', 'CrudController@edit');
 Route::get('/crud/delete/{id}', 'CrudController@delete');
+Route::get('/searchResults', 'searchResultsController@index')->name('searchResults');
