@@ -22,5 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact', 'ContactController@index')->name('contact');
 
 // Back-end
-Route::post('/crud/edit/{id}', 'CrudController@edit');
-Route::get('/crud/delete/{id}', 'CrudController@delete');
+//Route::get('/crud/create', 'HomeController@create');
+Route::post('/crud/edit/{id}', 'HomeController@edit');
+Route::get('/crud/delete/{id}', 'HomeController@delete');

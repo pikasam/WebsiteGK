@@ -13,9 +13,8 @@
     <!-- Styles -->
     {{-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-theme.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-table.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -31,7 +30,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <!-- Branding Image -->
+                    <!-- Naam Website -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{-- {{ HTML::image('img/placeholder.jpg') }} --}}
                         {{ config('PhoteFrameOnline', 'PhotoFrameOnline') }}
@@ -79,7 +78,12 @@
                                     </form>
                                 </div>
                             </li>
-                            <li><a class="btn pull-right" data-toggle="modal" data-target="#newgame" onclick="document.getElementById('newform').action='crud/edit/-1';" role="button">New Game</a></li>
+                            {{-- Create --}}
+                            <li><a class="btn pull-right" data-toggle="modal" data-target="#newgame" onclick="
+                                document.getElementById('titlenew').textContent='Voeg Categorie Toe';
+                                document.getElementById('btnnew').textContent='Voeg Categorie Toe';
+                                document.getElementById('newform').action='crud/edit/-1';
+                                " role="button">New Game</a></li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
@@ -93,9 +97,13 @@
 
         @yield('content')
     </div>
+    @include('crud/create')
+    @include('crud/edit')
+    @include('crud/delete')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="js/bootstrap.min.js"></script>
+    {{-- <script src="js/bootstrap.min.js"></script> --}}
+    <script src="js/jquery-3.2.1.js"></script>
 </body>
 </html>
