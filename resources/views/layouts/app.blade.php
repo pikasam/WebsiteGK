@@ -33,6 +33,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
+                        {{-- {{ HTML::image('img/placeholder.jpg') }} --}}
                         {{ config('PhoteFrameOnline', 'PhotoFrameOnline') }}
                     </a>
                 </div>
@@ -70,42 +71,24 @@
                     <div class="collapse navbar-collapse" id="app-navbar-collapse">
                         <!-- Left Side Of Navbar -->
                         <ul class="nav navbar-nav list-inline master-navbar">
-                            <li><a href="/home">Home</a>
-                            {!! Form::open(array('url' => '/home', 'method' => 'POST', 'class' => 'form'))!!}
-                            <div class="form-group">
-                                {!! Form::text('searchbar', 'Zoeken...', ['class' => 'form-control']) !!}
-                                {!! Form::close() !!}
-                            </div></li>
-                            {{-- <div class="form-group">
-                                {!! Form::submit('test', ['class' => 'btn btn-default']) !!}
+                            <li><a href="/home">Home</a></li>
+                            <li>
                                 <div class="form-group">
-                                {!! Form::close() !!}
+                                    <form action="/home" method="POST" class="form">
+                                        <input id="searchbar" value="Zoeken..." class="form-control"></input>
+                                    </form>
                                 </div>
-                            </div> --}}
+                            </li>
+                            <li><a class="btn pull-right" data-toggle="modal" data-target="#newgame" onclick="document.getElementById('newform').action='crud/edit/-1';" role="button">New Game</a></li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
                         <ul class="nav navbar-nav navbar-right">
-                            Aantal Bezoekers : 0
+                            <li><h5>Aantal Bezoekers : 0</h5></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="modal-body">
-                {!! Form::open(array('url' => '/crud.edit', 'method' => 'POST', 'class' => 'form'))!!}
-                <div class="form-group">
-                    {!! Form::label('name', 'name') !!}
-                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
-                </div>
-                <div class="form-group">
-                    {!! Form::submit('Edit Game', ['class' => 'btn btn-default']) !!}
-                    <div class="form-group">
-                    {!! Form::close() !!}
-                    </div>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-header -->
         </nav>
 
         @yield('content')
@@ -113,6 +96,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    {{-- bootstrap js --}}
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
