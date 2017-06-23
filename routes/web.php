@@ -11,17 +11,19 @@
 |
 */
 
+//Dit word de route naar de home page van de front-end
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 // Front-end
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact', 'ContactController@index')->name('contact');
 
+// Login/Registratie/etc...
+Auth::routes();
+
 // Back-end
+Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/crud/create', 'HomeController@create');
 Route::post('/crud/edit/{id}', 'HomeController@edit');
 Route::get('/crud/delete/{id}', 'HomeController@delete');

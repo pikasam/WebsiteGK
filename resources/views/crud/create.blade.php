@@ -10,6 +10,7 @@
           {{ csrf_field() }}
           <label id="name">Name</label>
           <input id="name" name="name" class="form-control">
+          <input type="file" name="catmap_img" class="form-control">
           <button id="btnnew" class="btn btn-warning"></button>
         </form>
       </div>
