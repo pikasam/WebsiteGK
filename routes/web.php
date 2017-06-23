@@ -25,3 +25,4 @@ Route::get('/contact', 'ContactController@index')->name('contact');
 //Route::get('/crud/create', 'HomeController@create');
 Route::post('/crud/edit/{id}', 'HomeController@edit');
 Route::get('/crud/delete/{id}', 'HomeController@delete');
+Route::get('/searchResults', 'searchResultsController@index')->name('searchResults');

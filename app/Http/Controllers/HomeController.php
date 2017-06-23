@@ -27,6 +27,7 @@ class HomeController extends Controller
         $categories = Category::all();
         //dd($categories);
         $data = array(
+            // key       => value
             'categories' => $categories,
         );
 

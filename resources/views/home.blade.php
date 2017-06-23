@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     @foreach($categories as $category)
                         <ul class="nav navbar-nav">
-                            <li>{{ $category->categorymap_img }}</li>
+                            <li>{{ $category->catmap_img }}</li>
                             <li>{{ $category->name }}</li>
                                 <ul class="navbar-nav list-inline">
                                     {{-- Edit --}}
