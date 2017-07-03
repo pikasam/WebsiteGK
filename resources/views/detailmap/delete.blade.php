@@ -1,5 +1,5 @@
 {{-- Delete page --}}
-<div class="modal fade" id="delete" tabindex="-1" role="dialog">
+<div class="modal fade" id="deletegame" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">

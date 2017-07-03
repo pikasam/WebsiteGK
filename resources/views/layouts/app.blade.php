@@ -20,7 +20,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet"> 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
+
+    {{-- Scripts nodig voor functies --}}
+    <script src="js/jquery-3.2.1.js"></script>
 </head>
 
 {{-- Body file --}}
@@ -116,14 +118,7 @@
                             </li>
 
                             {{-- Create --}}
-                            <li><a class="btn pull-right" data-toggle="modal" data-target="#newgame" onclick="
-                                
-                                //Hier vraag je de id op en geef je het iets mee.
-                                //Dus met het id titlenew geef je Voeg Categorie Toe mee 
-                                document.getElementById('titlenew').textContent='Voeg Categorie Toe';
-                                document.getElementById('btnnew').textContent='Voeg Categorie Toe';
-                                document.getElementById('newform').action='crud/edit/-1';
-                                " role="button">Nieuwe Categorie</a></li>
+                            <li><a class="btn pull-right" data-toggle="modal" data-target="#create" role="button">Nieuwe Categorie</a></li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
@@ -147,8 +142,7 @@
     @include('crud/edit')
     @include('crud/delete')
 
-    <!-- Scripts -->
+    <!-- Overige Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="js/jquery-3.2.1.js"></script>
 </body>
 </html>

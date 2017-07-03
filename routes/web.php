@@ -23,7 +23,13 @@ Route::get('/contact', 'ContactController@index')->name('contact');
 Auth::routes();
 
 // Back-end
+// Category
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/crud/create', 'HomeController@create');
 Route::post('/crud/edit/{id}', 'HomeController@edit');
 Route::get('/crud/delete/{id}', 'HomeController@delete');
+
+// Detail en Sortedmap
+// Route::get('/sortedcat', 'HomeController@sorted');
+// Route::get('/detailmap', 'DetailmapController@index');
+// Route::post('/detailmap/edit/{id}', 'DetailmapController@edit');
+// Route::get('/detailmap/delete/{id}', 'DetailmapController@delete');
