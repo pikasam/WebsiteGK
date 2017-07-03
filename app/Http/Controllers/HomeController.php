@@ -43,6 +43,7 @@ class HomeController extends Controller
 
         //Array $data waar je met key => value $categories erin zet
         $data = array(
+            // key       => value
             'categories' => $categories,
             //'image' => $image,
         );
